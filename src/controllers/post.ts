@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 export const submit = (req: Request, res: Response) => {
-    console.log("Submit, we are in submitttt");
+    console.log("Submit, we are in submit.");
     if (!req.user) {
       // TODO Add "You need to login" message
       return res.redirect("/login");
