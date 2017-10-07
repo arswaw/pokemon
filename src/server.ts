@@ -32,6 +32,7 @@ import * as homeController from "./controllers/home";
 import * as userController from "./controllers/user";
 import * as apiController from "./controllers/api";
 import * as contactController from "./controllers/contact";
+import * as postController from "./controllers/post";
 
 /**
  * API keys and Passport configuration.
@@ -107,6 +108,8 @@ app.use(express.static(path.join(__dirname, "public"), { maxAge: 31557600000 }))
 app.get("/", homeController.index);
 app.get("/login", userController.getLogin);
 app.post("/login", userController.postLogin);
+app.get("/api/submit", postController.submit);
+app.get("/post/create", postController.create);
 app.get("/logout", userController.logout);
 app.get("/forgot", userController.getForgot);
 app.post("/forgot", userController.postForgot);

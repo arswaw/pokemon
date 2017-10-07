@@ -125,7 +125,7 @@ export let getAccount = (req: Request, res: Response) => {
 };
 
 /**
- * POST /account/profile
+ * POST /`account/profile`
  * Update profile information.
  */
 export let postUpdateProfile = (req: Request, res: Response, next: NextFunction) => {
